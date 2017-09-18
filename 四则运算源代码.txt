@@ -1,0 +1,21 @@
+代码：
+#include<iostream>
+using namespace std;
+void main()
+{
+int i,x,y,z;
+for(i=1;i<=30;i++)
+{
+x=rand()%99;    //产生随机数x为第一位数
+y=rand()%99;   //产生随机数y为第二位数
+z=(x+y)%4;      //z用来确定随机产生的运算符号
+if(z==0)                                                      //输出算术式
+cout<<i<<"："<<x<<"+"<<y<<"="<<endl;
+if(z==1)
+cout<<i<<"："<<x<<"-"<<y<<"="<<endl;
+if(z==2)
+cout<<i<<"："<<x<<"*"<<y<<"="<<endl;
+if(z==3)
+cout<<i<<"："<<x<<"/"<<y<<"="<<endl;
+}
+}
